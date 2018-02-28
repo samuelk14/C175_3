@@ -1,0 +1,229 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="proyecto2.app1.com.example.pc.c175.BlankFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="94dp"
+        android:layout_height="33dp"
+        android:text="ENGINE OIL PRESSURE"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#ffc400"
+        android:gravity="center"
+        android:layout_marginLeft="41dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="17dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="94dp"
+        android:layout_height="33dp"
+        android:text="INTAKE MANIFOLD PRESSURE"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#ffc400"
+        android:layout_marginTop="17dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        android:layout_marginLeft="41dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="94dp"
+        android:layout_height="33dp"
+        android:text="FUEL PRESSURE"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#ffc400"
+        android:layout_marginTop="17dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginLeft="41dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="94dp"
+        android:layout_height="33dp"
+        android:text="ENGINE COOLANT PRESSURE"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#ffc400"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar3"
+        android:layout_marginLeft="41dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="94dp"
+        android:layout_height="33dp"
+        android:text="FUEL OIL TEMPERATURE"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#ffc400"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar2"
+        app:layout_constraintLeft_toRightOf="@+id/textView4"
+        android:layout_marginLeft="41dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="94dp"
+        android:layout_height="33dp"
+        android:text="ENGINE OIL TEMPERATURE"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#ffc400"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar4"
+        app:layout_constraintLeft_toRightOf="@+id/textView5"
+        android:layout_marginLeft="41dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:background="#212121"
+        android:max="10"
+        android:progress="3"
+        android:rotation="270"
+        app:layout_constraintLeft_toRightOf="@+id/seekBar3"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="33dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:background="#212121"
+        android:max="50"
+        android:progress="1"
+        android:rotation="270"
+        android:layout_marginTop="33dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginLeft="41dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:background="#212121"
+        android:max="10"
+        android:progress="3"
+        android:rotation="270"
+        app:layout_constraintLeft_toRightOf="@+id/seekBar2"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="33dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <SeekBar
+        android:id="@+id/seekBar5"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:background="#212121"
+        android:max="10"
+        android:progress="3"
+        android:rotation="270"
+        android:layout_marginLeft="41dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar6"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:background="#212121"
+        android:max="10"
+        android:progress="3"
+        android:rotation="270"
+        app:layout_constraintLeft_toRightOf="@+id/seekBar5"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar7"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:background="#212121"
+        android:max="10"
+        android:progress="3"
+        android:rotation="270"
+        app:layout_constraintLeft_toRightOf="@+id/seekBar6"
+        android:layout_marginLeft="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.492" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:text="SHUTDOWN SWITHC"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#ffc400"
+        android:layout_marginTop="17dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textView3"
+        android:layout_marginLeft="41dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/switch2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:text="COOLANT LEVEL"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#ffc400"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textView6"
+        android:layout_marginLeft="41dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="109dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GENERAL OVERVIEW"
+        android:textColor="#ffc400"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.501" />
+
+
+</android.support.constraint.ConstraintLayout>

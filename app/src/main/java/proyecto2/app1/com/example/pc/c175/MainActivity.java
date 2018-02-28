@@ -1,5 +1,9 @@
 package proyecto2.app1.com.example.pc.c175;
 
+import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,14 +28,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         boton5.setOnClickListener(this);
     }
 
+
+
     @Override
     public void onClick(View view) {
         try {
             switch (view.getId()) {
                 case R.id.boton1:
+                    Intent i1 = new Intent(this, Main3Activity.class);
+                    startActivity(i1);
+                    BlankFragment fragment1 = new BlankFragment();
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction FragmentTransaction = fragmentManager.beginTransaction();
+                    FragmentTransaction.add(R.id.activity2, fragment1, null);
+                    return;
+
+                case R.id.boton2:
+                    Intent in = new Intent(this, MainNavActivity.class);
+                    startActivity(in);
+                    return;
+
 
             }
+        } catch (Exception e) {
+            System.out.print("Verifique valores ingresados");
         }
 
     }
+
+
 }
