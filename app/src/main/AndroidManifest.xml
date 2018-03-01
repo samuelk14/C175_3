@@ -19,9 +19,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main3Activity"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".MainNavActivity"
             android:label="@string/title_activity_main_nav"
             android:theme="@style/AppTheme.NoActionBar"

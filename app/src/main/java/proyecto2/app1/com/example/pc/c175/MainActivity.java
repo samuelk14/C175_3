@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         try {
             switch (view.getId()) {
                 case R.id.boton1:
-                    Intent i1 = new Intent(this, Main3Activity.class);
+                    MainNavActivity.option=1;
+                    Intent i1 = new Intent(this, MainNavActivity.class);
                     startActivity(i1);
                     BlankFragment fragment1 = new BlankFragment();
                     FragmentManager fragmentManager = getSupportFragmentManager();
@@ -44,8 +45,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return;
 
                 case R.id.boton2:
+                    MainNavActivity.option=2;
                     Intent in = new Intent(this, MainNavActivity.class);
                     startActivity(in);
+                    return;
+                case R.id.boton3:
+                    MainNavActivity.option=3;
+                    Intent i =new Intent(this, MainNavActivity.class);
+                    startActivity(i);
+                    return;
+                case R.id.boton4:
+                    MainNavActivity.option=4;
+                    Intent i2 = new Intent(this, MainNavActivity.class);
+                    startActivity(i2);
+                    return;
+                case R.id.boton5:
+                    MainNavActivity.option=5;
+                    Intent i3 = new Intent(this, MainNavActivity.class);
+                    startActivity(i3);
                     return;
 
 

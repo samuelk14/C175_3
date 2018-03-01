@@ -15,7 +15,7 @@
         android:textStyle="bold"
         android:textColor="#ffc400"
         android:gravity="center"
-        android:layout_marginLeft="41dp"
+        android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="17dp"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -59,7 +59,7 @@
         android:textColor="#ffc400"
         android:layout_marginTop="36dp"
         app:layout_constraintTop_toBottomOf="@+id/seekBar3"
-        android:layout_marginLeft="41dp"
+        android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
@@ -113,7 +113,7 @@
         android:rotation="270"
         android:layout_marginTop="33dp"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:layout_marginLeft="41dp"
+        android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <SeekBar
@@ -137,12 +137,13 @@
         android:max="10"
         android:progress="3"
         android:rotation="270"
-        android:layout_marginLeft="41dp"
+        android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0.507" />
 
     <SeekBar
         android:id="@+id/seekBar6"
@@ -184,15 +185,10 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="#ffc400"
-        android:layout_marginTop="17dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        android:layout_marginRight="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/textView3"
-        android:layout_marginLeft="41dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/switch2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="207dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Switch
         android:id="@+id/switch2"
@@ -203,12 +199,10 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="#ffc400"
-        android:layout_marginRight="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/textView6"
-        android:layout_marginLeft="41dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="109dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/switch1"
+        android:layout_marginLeft="8dp" />
 
     <TextView
         android:id="@+id/textView7"
@@ -218,12 +212,9 @@
         android:textColor="#ffc400"
         android:textSize="20dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="7dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.501" />
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

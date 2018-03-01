@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,6 +19,7 @@ import android.view.MenuItem;
 public class MainNavActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, PressuresFragment.OnFragmentInteractionListener {
 
+    public static int option;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,14 +27,7 @@ public class MainNavActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -42,6 +37,16 @@ public class MainNavActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        FragmentManager fm =getSupportFragmentManager();
+        switch (option){
+            case 1: fm.beginTransaction().replace(R.id.contenido,new BlankFragment()).commit();break;
+            case 2: fm.beginTransaction().replace(R.id.contenido,new PressuresFragment()).commit();break;
+            case 3: fm.beginTransaction().replace(R.id.contenido,new EngineFragment()).commit();break;
+            case 4: fm.beginTransaction().replace(R.id.contenido,new TempFragment()).commit();break;
+            case 5: fm.beginTransaction().replace(R.id.contenido,new BlankFragment()).commit();break;
+            default: fm.beginTransaction().replace(R.id.contenido,new BlankFragment()).commit();break;
+
+        }
     }
 
     @Override
@@ -82,21 +87,17 @@ public class MainNavActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        Fragment fragment = null;
-        Boolean FragmentoSeleccionado=false;
+        FragmentManager fm = getSupportFragmentManager();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
-
+          fm.beginTransaction().replace(R.id.contenido,new BlankFragment()).commit();
         } else if (id == R.id.nav_gallery) {
 
-            fragment = new PressuresFragment();
-            FragmentoSeleccionado=true;
+            fm.beginTransaction().replace(R.id.contenido,new PressuresFragment()).commit();
 
         } else if (id == R.id.nav_slideshow) {
 
-            fragment = new BlankFragment();
-            FragmentoSeleccionado=true;
+            fm.beginTransaction().replace(R.id.contenido,new EngineFragment()).commit();
 
         } else if (id == R.id.nav_manage) {
 
@@ -106,9 +107,7 @@ public class MainNavActivity extends AppCompatActivity
 
         }
 
-        if (FragmentoSeleccionado){
-            getSupportFragmentManager().beginTransaction().replace(R.id.Contenedor, fragment).commit();
-        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
