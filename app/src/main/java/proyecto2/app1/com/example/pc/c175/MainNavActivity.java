@@ -43,7 +43,7 @@ public class MainNavActivity extends AppCompatActivity
             case 2: fm.beginTransaction().replace(R.id.contenido,new PressuresFragment()).commit();break;
             case 3: fm.beginTransaction().replace(R.id.contenido,new EngineFragment()).commit();break;
             case 4: fm.beginTransaction().replace(R.id.contenido,new TempFragment()).commit();break;
-            case 5: fm.beginTransaction().replace(R.id.contenido,new BlankFragment()).commit();break;
+            case 5: fm.beginTransaction().replace(R.id.contenido,new SwitchesFragment()).commit();break;
             default: fm.beginTransaction().replace(R.id.contenido,new BlankFragment()).commit();break;
 
         }
@@ -100,8 +100,10 @@ public class MainNavActivity extends AppCompatActivity
             fm.beginTransaction().replace(R.id.contenido,new EngineFragment()).commit();
 
         } else if (id == R.id.nav_manage) {
+            fm.beginTransaction().replace(R.id.contenido,new TempFragment()).commit();
 
         } else if (id == R.id.nav_share) {
+            fm.beginTransaction().replace(R.id.contenido,new SwitchesFragment()).commit();
 
         } else if (id == R.id.nav_send) {
 
